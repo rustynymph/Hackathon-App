@@ -39,7 +39,10 @@ public class Earthquake extends Data {
                         if (magnitude > 6) {
                             json.put("msg", randMsg);
                             json.put("outcome", randOutcome);
-                        }
+                        }else json.put("msg", "Whew! That wasn't so bad. The earthquake shook stuff up, but damage wasn't severe. What about aftershocks?");
+
+                        if ((magnitude < 5.5) && (magnitude > 2)) json.put("msg", "Oh no! The earthquake wasn't too bad, but the aftershocks caused a tsunami which has taken out part of the coastline. Will you help with the cleanup effort?");
+
 		} catch (JSONException e) {
 
 		}
