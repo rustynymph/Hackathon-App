@@ -1,4 +1,4 @@
-// Disaster Relief -- Tsunami!
+// Disaster Relief -- Earthquake!
 // 11/8 Hackathon
 
 import java.io.IOException;

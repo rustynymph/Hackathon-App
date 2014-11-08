@@ -1,9 +1,6 @@
 import java.util.Random;
-
 import com.google.appengine.labs.repackaged.org.json.JSONException;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
-
-//import Data;
 
 public class Earthquake extends Data {
 	public static Earthquake[] earthquakes() {
