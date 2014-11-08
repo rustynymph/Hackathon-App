@@ -496,7 +496,7 @@ public class Data {
 
     private static Data[] evacdPostQuakeMssg = {
         "Great news! You chose to evacuate and got out in time. Unfortunately, your roommate and your dog are still within the damage radius. You're going to have to go back. Is a tidal wave likely?",
-        "Wow! You evacuated in time, you brought a couple of important personal belongings, and you remembered to bring your cat. You also had renter's insurance, so you'll be able to get a new apartment, since your old building totally got taken out.",
+        "Wow! You evacuated in time, you brought a couple of important personal belongings, and you remembered to bring your cat. Your building collapsed. Do you have insurance?",
         "You're a good person, so you choose to come back and help, even though you got out safely. Will you bring water and food to your neighbors, volunteer with local aid initiatives, or...?",
         "The earthquake was so severe and far-reaching that a tsunami was caused offshore. A huge portion of the coast was affected! Since you're okay, (but your home and your work are gone) will you go help?",
     };
@@ -514,7 +514,10 @@ public class Data {
         "You and your loyal dog, Spot, live in an apartment. You have renter's insurance.",
         "You and your three cats live in an apartment. You don't have renter's insurance.",
         "You live in a cottage right on the waterfront! You enjoy long walks on the beach and are totally not worried about hurricanes or tidal waves, so you have no flood insurance.",
-
+        "You have left town for the weekend for a quick vacation. You don't have insurance, but you don't have a lot of stuff, so you think you'll be okay if anything happens",
+        "You are a survivalist! You are prepared for every emergency. You have insurance on everything you own. You have water and food ready to go. You've always got a go-bag packed. While this is a little excessive, it hasn't failed you yet.",
+        "You aren't a survivalist, but you're pretty aware that earthquakes are likely where you live. You have car insurance and renter's insurance.",
+        "You keep a small survival kit in case of an earthquake or other natural disaster. You like to be prepared. Your survival kit has bottled water, food, a knife, some rope, a collapsible shovel, and a warm jacket.",
     };
 
 }

@@ -27,8 +27,10 @@ public class Earthquake extends Data {
 
                 int evac = new Random().nextInt(2);
                 int index = 0;
+                int preind = 0;
                 String randMsg = "";
                 String randOutcome = "";
+                String randBefore = "";
 
                 if (evac) {
                     index = new Random().nextInt(evacMsg.length);
@@ -42,12 +44,16 @@ public class Earthquake extends Data {
                     randOutcome = (noEvacPostQuake[index]);
                 }
 
+                preind = new Random().nextInt(beforeQuake.length);
+                randBefore = (beforeQuake[preind]);
 
 		try {
 			coordinates.put("x", this.x);
 			coordinates.put("y",this.y);
 			json.put("coordinates",coordinates);
 			json.put("magnitude",magnitude);
+                        json.put("before", randBefore);
+
                         if (magnitude > 6) {
                             json.put("msg", randMsg);
                             json.put("outcome", randOutcome);
