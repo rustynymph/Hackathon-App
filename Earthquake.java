@@ -8,7 +8,7 @@ public class Earthquake extends Data {
 		Earthquake[] earthquakes = new Earthquake[10];
 		for (int i = 0; i < earthquakes.length; i++) {
 			Random r = new Random();
-			earthquakes[i] = Earthquake.earthquake[r.nextInt(Earthquake.earthquake.length)];
+			earthquakes[i] = Data.earthquake[r.nextInt(Data.earthquake.length)];
 		}
 		return earthquakes;
 	}
@@ -34,16 +34,13 @@ public class Earthquake extends Data {
 		try {
 			coordinates.put("x", this.x);
 			coordinates.put("y",this.y);
-
 			json.put("coordinates",coordinates);
 			json.put("magnitude",magnitude);
-
                         if (magnitude > 6) {
                             json.put("msg", randMsg);
                             json.put("outcome", randOutcome);
-                        }
 		} catch (JSONException e) {
-                        json.put("error", e);
+
 		}
 		return json;
 	}
