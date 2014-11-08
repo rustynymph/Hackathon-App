@@ -25,11 +25,23 @@ public class Earthquake extends Data {
 		JSONObject json = new JSONObject();
 		JSONObject coordinates = new JSONObject();
 
-                int index = new Random().nextInt(msg.length);
-                String randMsg = (msg[index]);
+                int evac = new Random().nextInt(2);
+                int index = 0;
+                String randMsg = "";
+                String randOutcome = "";
 
-                index = new Random().nextInt(postQuakeMssg.length);
-                String randOutcome = (postQuakeMssg[index]);
+                if (evac) {
+                    index = new Random().nextInt(evacMsg.length);
+                    randMsg = (msg[index]);
+                    index = new Random().nextInt(evacdpostQuakeMssg.length);
+                    randOutcome = (postQuakeMssg[index]);
+                }else {
+                    index = new Random().nextInt(noEvac.length);
+                    randMsg = (noEvac[index]);
+                    index = new Random().nextInt(noEvacPostQuake.length);
+                    randOutcome = (noEvacPostQuake[index]);
+                }
+
 
 		try {
 			coordinates.put("x", this.x);
@@ -44,7 +56,7 @@ public class Earthquake extends Data {
                         if ((magnitude < 5.5) && (magnitude > 2)) json.put("msg", "Oh no! The earthquake wasn't too bad, but the aftershocks caused a tsunami which has taken out part of the coastline. Will you help with the cleanup effort?");
 
 		} catch (JSONException e) {
-
+                        json.put("error", e);
 		}
 		return json;
 	}

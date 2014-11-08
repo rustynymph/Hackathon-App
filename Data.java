@@ -476,7 +476,16 @@ public class Data {
 	new Earthquake(7.612,94.468,4.6)
 	};
 
-    private static Data[] msg = {
+
+    private static Data[] noEvac = {
+        "You choose not to evacuate. Everything is starting to rattle...",
+        "Your mom is in a wheelchair and doesn't want to evacuate, so you choose to stay with her. Everything is starting to shake a little bit and you're getting a little nervous...",
+        "You're asleep when the quake hits, so you don't have time to choose to evacuate.",
+        "You don't evacuate because you can't gather up enough of your treasured momentos in time.",
+    };
+
+
+    private static Data[] evacMsg = {
         "Oh no! It's a really bad one, are you going to evacuate?",
         "Time to make a decision! Do you want to evacuate?",
         "Are you ready to evacuate?!",
@@ -485,13 +494,18 @@ public class Data {
         "You chose to stay put when you felt the initial rumblings, but this earthquake is worse than you thought it would be. Your roommates have already left. What do you choose to do?",
     };
 
-    private static Data[] postQuakeMssg = {
-        "You chose not to evacuate and your car fell into a sinkhole. You're okay, but you are going to have to walk to the next town. What are you going to do if there are aftershocks? Do you have enough water?",
+    private static Data[] evacdPostQuakeMssg = {
         "Great news! You chose to evacuate and got out in time. Unfortunately, your roommate and your dog are still within the damage radius. You're going to have to go back. Is a tidal wave likely?",
-        "Oh no! You chose not to evacuate and your house got leveled. You were outside away from any falling debris. Do you have homeowner's insurance?",
         "Wow! You evacuated in time, you brought a couple of important personal belongings, and you remembered to bring your cat. You also had renter's insurance, so you'll be able to get a new apartment, since your old building totally got taken out.",
         "You're a good person, so you choose to come back and help, even though you got out safely. Will you bring water and food to your neighbors, volunteer with local aid initiatives, or...?",
         "The earthquake was so severe and far-reaching that a tsunami was caused offshore. A huge portion of the coast was affected! Since you're okay, (but your home and your work are gone) will you go help?",
+    };
+
+    private static Data[] noEvacPostQuake = {
+        "You chose not to evacuate and your car fell into a sinkhole. You're okay, but you are going to have to walk to the next town. What are you going to do if there are aftershocks? Do you have enough water?",
+        "Oh no! You chose not to evacuate and your house got leveled. You were outside away from any falling debris. Do you have homeowner's insurance?",
+        "You don't have insurance and you chose not to leave. Your apartment complex collapsed... now you're injured and you need help. What do you do?",
+        "You are severely injured. You were walking along the street and something heavy fell on you. However, relief workers have found you.",
     };
 
     private static Data[] beforeQuake = {
