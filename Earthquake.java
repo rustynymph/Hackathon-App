@@ -28,14 +28,22 @@ public class Earthquake extends Data {
                 int index = new Random().nextInt(msg.length);
                 String randMsg = (msg[index]);
 
+                index = new Random().nextInt(postQuakeMssg.length);
+                String randOutcome = (postQuakeMssg[index]);
+
 		try {
 			coordinates.put("x", this.x);
 			coordinates.put("y",this.y);
+
 			json.put("coordinates",coordinates);
 			json.put("magnitude",magnitude);
-                        if (magnitude > 6) json.put("msg", randMsg);
-		} catch (JSONException e) {
 
+                        if (magnitude > 6) {
+                            json.put("msg", randMsg);
+                            json.put("outcome", randOutcome);
+                        }
+		} catch (JSONException e) {
+                        json.put("error", e);
 		}
 		return json;
 	}

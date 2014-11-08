@@ -5,8 +5,16 @@ public static class Data {
         "Are you ready to evacuate?!",
         "You staying put? Time to surf the shockwaves...",
         "Oh no! You check everywhere inside your house but you can't find your dog, Spot. Are you going to look for him more, or will you evacuate?",
-        "You chose to stay put when you felt the initial rumblings, but this earthquake is worse than you thought it would be. Your roommates have already left. What do you choose to do?"
+        "You chose to stay put when you felt the initial rumblings, but this earthquake is worse than you thought it would be. Your roommates have already left. What do you choose to do?",
     };
+
+    private static postQuakeMsg[] postQuakeMssg = {
+        "You chose not to evacuate and your car fell into a sinkhole. You're okay, but you are going to have to walk to the next town. What are you going to do if there are aftershocks? Do you have enough water?",
+        "Great news! You chose to evacuate and got out in time. Unfortunately, your roommate and your dog are still within the damage radius. You're going to have to go back. Is a tidal wave likely?",
+        "Oh no! You chose not to evacuate and your house got leveled. You were outside away from any falling debris. Do you have homeowner's insurance?",
+        "Wow! You evacuated in time, you brought a couple of important personal belongings, and you remembered to bring your cat. You also had renter's insurance, so you'll be able to get a new apartment, since your old building totally got taken out.",
+    };
+
 
     private static Data[] earthquake = {
 		new Earthquake(-6.044,148.210,6.6),
