@@ -1,6 +1,14 @@
 public static class Data {
+    private static Data[] msg = {
+        "Oh no! It's a really bad one, are you going to evacuate?",
+        "Time to make a decision! Do you want to evacuate?",
+        "Are you ready to evacuate?!",
+        "You staying put? Time to surf the shockwaves...",
+        "Oh no! You check everywhere inside your house but you can't find your dog, Spot. Are you going to look for him more, or will you evacuate?",
+        "You chose to stay put when you felt the initial rumblings, but this earthquake is worse than you thought it would be. Your roommates have already left. What do you choose to do?"
+    };
 
-    private static Earthquake[] earthquake = {
+    private static Data[] earthquake = {
 		new Earthquake(-6.044,148.210,6.6),
 		new Earthquake(-19.696,-177.729,7.1),
 		new Earthquake(12.576,-88.047,7.3),

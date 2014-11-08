@@ -1,9 +1,7 @@
 import java.util.Random;
-
+import java.lang.String;
 import com.google.appengine.labs.repackaged.org.json.JSONException;
 import com.google.appengine.labs.repackaged.org.json.JSONObject;
-
-//import Data;
 
 public class Earthquake extends Data {
 	public static Earthquake[] earthquakes() {
@@ -26,11 +24,16 @@ public class Earthquake extends Data {
 	public JSONObject toJson() {
 		JSONObject json = new JSONObject();
 		JSONObject coordinates = new JSONObject();
+
+                int index = new Random().nextInt(msg.length);
+                String randMsg = (msg[index]);
+
 		try {
 			coordinates.put("x", this.x);
 			coordinates.put("y",this.y);
 			json.put("coordinates",coordinates);
 			json.put("magnitude",magnitude);
+                        if (magnitude > 6) json.put("msg", randMsg);
 		} catch (JSONException e) {
 
 		}
