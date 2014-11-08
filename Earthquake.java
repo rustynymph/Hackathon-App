@@ -39,6 +39,7 @@ public class Earthquake extends Data {
                         if (magnitude > 6) {
                             json.put("msg", randMsg);
                             json.put("outcome", randOutcome);
+                        }
 		} catch (JSONException e) {
 
 		}
